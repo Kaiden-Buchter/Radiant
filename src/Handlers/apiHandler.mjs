@@ -24,9 +24,10 @@ async function sendDataToWebsite(data) {
         response.status,
         response.statusText
       );
+      const responseData = await response.json();
       console.log(
         `${chalk.bold(chalk.greenBright(`[API Manager]`))} ${JSON.stringify(
-          await response.text(),
+          responseData,
           null,
           2
         )}`
