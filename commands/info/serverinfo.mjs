@@ -24,7 +24,7 @@ export default {
 
     const embed = new EmbedBuilder()
       .setTitle(`${guild.name}'s Information`)
-      .setThumbnail(guild.iconURL()({ dynamic: true }))
+      .setThumbnail(guild.iconURL({ dynamic: true }))
       .addFields(
         { name: "Server ID", value: guild.id },
         { name: "Owner", value: owner.user.tag },

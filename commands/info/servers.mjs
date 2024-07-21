@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 import Ban from "../../schemas/Ban.mjs";
 import { EmbedBuilder } from "discord.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 async function getBansFromDatabase(guildId) {
   const bans = await Ban.find({ guilds: guildId });
@@ -26,8 +29,7 @@ export default {
   },
   load: true,
   async execute(interaction) {
-    const uri =
-      "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/bans?retryWrites=true&w=majority&appName=Radiant";
+    const uri = process.env.MONGODB_URI_BANS;
     let connection = mongoose.connections.find(
       (connection) => connection.name === "bans"
     );
