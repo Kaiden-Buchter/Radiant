@@ -34,7 +34,7 @@ async function sendDataToWebsite(data) {
       );
     }
   } catch (error) {
-    console.error(`${chalk.bold(chalk.greenBright(`[API Manager]`))}`, error);
+    console.log(`${chalk.bold(chalk.greenBright(`[API Manager]`))} Could not connect to API`);
   }
 }
 

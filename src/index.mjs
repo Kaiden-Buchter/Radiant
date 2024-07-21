@@ -10,7 +10,7 @@ import chalk from "chalk";
 // Importing handlers and setup functions
 import messageCreateHandler from "./Handlers/messageCreateHandler.mjs";
 import commandHandler from "./Handlers/commandHandler.mjs";
-import readyHandler from "./Handlers/readyHandler.mjs";
+import readyHandler from "./Handlers/readyHandler.mjs"; 
 import { sendDataToWebsite } from './Handlers/apiHandler.mjs';
 import commandSetup from "./commandSetup.mjs";
 
