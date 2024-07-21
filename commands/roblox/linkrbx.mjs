@@ -3,9 +3,11 @@ import noblox from "noblox.js";
 import RbxUser from "../../schemas/Rbx.mjs";
 import KnownRbxUser from "../../schemas/KnownRbxUser.mjs";
 import { EmbedBuilder } from "discord.js";
+import dotenv from "dotenv";
 
-const dbConnectionString =
-  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/rbx?retryWrites=true&w=majority&appName=Radiant";
+dotenv.config();
+
+const dbConnectionString = process.env.MONGODB_URI_RBX;
 
 mongoose
   .connect(dbConnectionString)

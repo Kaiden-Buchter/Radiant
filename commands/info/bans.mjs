@@ -6,6 +6,9 @@ import {
   ButtonBuilder,
   ButtonStyle,
 } from "discord.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default {
   data: {
@@ -17,7 +20,7 @@ export default {
   load: true,
   async execute(interaction) {
     if (mongoose.connection.readyState === 0) {
-      await mongoose.connect("your_mongodb_connection_string");
+      await mongoose.connect(process.env.MONGO_URI_BANS);
     }
 
     const globalBans = await Ban.find({ guilds: interaction.guild.id });

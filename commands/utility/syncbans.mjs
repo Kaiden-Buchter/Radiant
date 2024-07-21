@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 import Ban from "../../schemas/Ban.mjs";
 import { EmbedBuilder } from "discord.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default {
   data: {
@@ -12,9 +15,7 @@ export default {
   load: true,
   async execute(interaction) {
     if (mongoose.connection.readyState === 0) {
-      await mongoose.connect(
-        "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/bans?retryWrites=true&w=majority&appName=Radiant"
-      );
+      await mongoose.connect(process.env.MONGODB_URI_BANS);
     }
 
     const bans = await Ban.find({});

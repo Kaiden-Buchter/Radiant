@@ -1,10 +1,12 @@
 import { MongoClient } from "mongodb";
 import Ban from "../../schemas/Ban.mjs";
 import { EmbedBuilder } from "discord.js";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 async function connectToDatabase() {
-  const mongoUri =
-    "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/bans?retryWrites=true&w=majority&appName=Radiant";
+  const mongoUri = process.env.MONGODB_URI_BANS;
   try {
     const client = await MongoClient.connect(mongoUri);
     return client.db("bans");
