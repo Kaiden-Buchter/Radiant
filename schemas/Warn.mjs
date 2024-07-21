@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
-const warnConn = mongoose.createConnection(
-  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/userWarning?retryWrites=true&w=majority&appName=Radiant"
-);
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const warnConn = mongoose.createConnection(process.env.MONGODB_URI_WARN);
 
 const WarnSchema = new mongoose.Schema({
   userId: { type: String, required: true, unique: true },

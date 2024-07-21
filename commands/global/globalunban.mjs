@@ -9,7 +9,7 @@ async function connectToDatabase() {
   const mongoUri = process.env.MONGODB_URI_BANS;
   try {
     const client = await MongoClient.connect(mongoUri);
-    return client.db("bans");
+    return client.db("globalBan");
   } catch (err) {
     throw new Error("Failed to connect to MongoDB:", err);
   }

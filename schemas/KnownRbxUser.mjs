@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
-const knownRbxConn = mongoose.createConnection(
-  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/knownRobloxUser?retryWrites=true&w=majority&appName=Radiant"
-);
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const knownRbxConn = mongoose.createConnection(process.env.MONGODB_URI_KNOWRBX);
 
 const KnownRbxUserSchema = new mongoose.Schema({
   discordId: { type: String, required: true, unique: true },

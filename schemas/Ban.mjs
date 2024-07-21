@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
-const bansConn = mongoose.createConnection(
-  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/globaBan?retryWrites=true&w=majority&appName=Radiant"
-);
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const bansConn = mongoose.createConnection(process.env.MONGODB_URI_BANS);
 
 const BanSchema = new mongoose.Schema({
   userId: {
