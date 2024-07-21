@@ -1,0 +1,25 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.17.0",
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.3",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "figlet": "^1.7.0",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.3",
+    "noblox.js": "^4.15.1",
+    "node-fetch": "^3.3.2",
+    "os": "^0.1.2",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7",
+    "ytdl-core": "^4.11.5"
+  }
+}

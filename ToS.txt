@@ -1,0 +1,23 @@
+Terms of Service for Radiant Discord Bot
+
+These Terms of Service ("Terms") govern your use of the Radiant Discord bot ("Radiant"), operated by Kaiden Scott Buchter ("we", "us", "our"). By adding Radiant to your Discord server or interacting with Radiant in any way, you agree to be bound by these Terms. If you do not agree with any part of these Terms, you may not use Radiant.
+
+Use of Radiant: Radiant is a multi-functional Discord bot designed to provide various utilities and entertainment features. You agree to use Radiant in accordance with Discord's Terms of Service and Community Guidelines, as well as these Terms.
+
+Data and Privacy: Radiant may collect and store user data necessary for its operation, including but not limited to user IDs, message content, and usage statistics. We are committed to protecting your privacy and will only use this data in accordance with our Privacy Policy.
+
+Prohibited Conduct: You agree not to use Radiant for any unlawful purposes or to engage in any activity that disrupts, interferes with, or harms Radiant, other users, or Discord itself. Prohibited conduct includes but is not limited to spamming, hacking, distributing malware, or violating Discord's Terms of Service.
+
+Intellectual Property: All content and intellectual property associated with Radiant, including but not limited to code, logos, and trademarks, are the property of Kaiden Scott Buchter and are protected by copyright and other intellectual property laws. You may not modify, reproduce, distribute, or create derivative works based on Radiant without our express written permission.
+
+Limitation of Liability: Kaiden Scott Buchter shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, use, or goodwill, arising from your use of Radiant or inability to use Radiant, even if we have been advised of the possibility of such damages.
+
+Changes to Terms: We reserve the right to modify or replace these Terms at any time. Changes will be effective immediately upon posting. Your continued use of Radiant after any changes to these Terms constitutes acceptance of those changes.
+
+Termination: We reserve the right to suspend or terminate your access to Radiant at any time, for any reason, without prior notice or liability.
+
+Governing Law: These Terms shall be governed by and construed in accordance with the laws of Pennsylvania, without regard to its conflict of law provisions.
+
+Contact Us: If you have any questions about these Terms, please contact us at knbuchtyy879@gmail.com.
+
+By using Radiant, you agree to these Terms. If you do not agree with these Terms, you may not use Radiant.

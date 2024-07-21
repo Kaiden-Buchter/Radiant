@@ -1,0 +1,34 @@
+Privacy Policy for Radiant Discord Bot
+
+This Privacy Policy ("Policy") explains how Kaiden Scott Buchter ("we", "us", "our") collects, uses, and discloses personal information collected from users ("you", "your") of the Radiant Discord bot ("Radiant"). By adding Radiant to your Discord server or interacting with Radiant in any way, you consent to the collection and use of your personal information as described in this Policy.
+
+Information We Collect:
+
+Discord User Information: When you interact with Radiant, we may collect and store certain information provided by Discord, such as your Discord user ID, username, avatar, and other information necessary for Radiant to function.
+Usage Data: We may collect information about your interactions with Radiant, including commands used, timestamps, and other usage statistics.
+Cookies and Tracking Technologies: Radiant does not use cookies or similar tracking technologies.
+Use of Information:
+
+We use the information collected to operate, maintain, and improve Radiant's functionality and performance.
+Personal information may be used to communicate with you, respond to your inquiries, and provide support related to Radiant.
+We may aggregate non-personal information for statistical purposes, but this data will not identify individual users.
+Sharing of Information:
+
+We do not share personal information collected from Radiant with third parties except as necessary to operate and maintain Radiant or as required by law.
+We may disclose information if we believe it is necessary to comply with legal obligations, protect our rights and property, or investigate and prevent unauthorized use of Radiant.
+Data Security:
+
+We implement appropriate technical and organizational measures to protect personal information against unauthorized access, alteration, disclosure, or destruction.
+Despite our efforts, no method of transmission over the internet or method of electronic storage is 100% secure. Therefore, we cannot guarantee absolute security of your information.
+Retention of Information:
+
+We retain personal information collected from Radiant as long as necessary to fulfill the purposes outlined in this Policy unless a longer retention period is required or permitted by law.
+Children's Privacy:
+
+Radiant is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us so that we can delete such information.
+Changes to this Policy:
+
+We reserve the right to update or change this Privacy Policy at any time. Any changes will be effective immediately upon posting the revised Policy on this page. Your continued use of Radiant after the posting of any changes constitutes acceptance of those changes.
+Contact Us:
+
+If you have any questions about this Privacy Policy, please contact us at knbuchtyy879@gmail.com.
