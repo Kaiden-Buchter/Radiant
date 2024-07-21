@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const bansConn = mongoose.createConnection(
-  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/bans?retryWrites=true&w=majority&appName=Radiant"
+  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/globaBan?retryWrites=true&w=majority&appName=Radiant"
 );
 
 const BanSchema = new mongoose.Schema({

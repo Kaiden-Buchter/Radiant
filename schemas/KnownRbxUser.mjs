@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const knownRbxConn = mongoose.createConnection(
-  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/knownRbx?retryWrites=true&w=majority&appName=Radiant"
+  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/knownRobloxUser?retryWrites=true&w=majority&appName=Radiant"
 );
 
 const KnownRbxUserSchema = new mongoose.Schema({

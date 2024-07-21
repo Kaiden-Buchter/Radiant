@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const warnConn = mongoose.createConnection(
-  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/warn?retryWrites=true&w=majority&appName=Radiant"
+  "mongodb+srv://Admin:radiantAdmin8243@radiant.gej3efo.mongodb.net/userWarning?retryWrites=true&w=majority&appName=Radiant"
 );
 
 const WarnSchema = new mongoose.Schema({
