@@ -19,16 +19,21 @@ async function sendDataToWebsite(data) {
         )}`
       );
     } else {
-      // If the response is not JSON, log the status and statusText
       console.log(
         "Non-JSON response received",
         response.status,
         response.statusText
       );
-      console.log(await response.text());
+      console.log(
+        `${chalk.bold(chalk.greenBright(`[API Manager]`))} ${JSON.stringify(
+          await response.text(),
+          null,
+          2
+        )}`
+      );
     }
   } catch (error) {
-    console.error("Error sending data to website:", error);
+    console.error(`${chalk.bold(chalk.greenBright(`[API Manager]`))}`, error);
   }
 }
 
