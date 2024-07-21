@@ -22,4 +22,4 @@ async function sendDataToWebsite(data) {
   }
 }
 
-export { sendDataToWebsite };
+export { sendDataToWebsite }; 
