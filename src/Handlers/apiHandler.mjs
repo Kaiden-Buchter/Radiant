@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import chalk from "chalk";
 
-async function sendDataToWebsite(data) {
+export default async function sendDataToWebsite(data) {
   try {
     const response = await fetch("http://localhost:3000/bot", {
       method: "POST",
@@ -37,5 +37,3 @@ async function sendDataToWebsite(data) {
     console.log(`${chalk.bold(chalk.greenBright(`[API Manager]`))} Could not connect to API`);
   }
 }
-
-export { sendDataToWebsite };

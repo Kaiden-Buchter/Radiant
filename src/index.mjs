@@ -9,9 +9,10 @@ import chalk from "chalk";
 
 // Importing handlers and setup functions
 import messageCreateHandler from "./Handlers/messageCreateHandler.mjs";
-import commandHandler from "./Handlers/commandHandler.mjs";
-import readyHandler from "./Handlers/readyHandler.mjs"; 
-import { sendDataToWebsite } from './Handlers/apiHandler.mjs';
+import interactionHandler from "./Handlers/interactionHandler.mjs";
+import welcomeHandler from "./Handlers/welcomeHandler.mjs";
+import sendDataToWebsite from "./Handlers/apiHandler.mjs";
+import readyHandler from "./Handlers/readyHandler.mjs";
 import commandSetup from "./commandSetup.mjs";
 
 // Load environment variables
@@ -87,16 +88,19 @@ console.log(
 client.on("ready", () => readyHandler(client));
 client.on("messageCreate", (message) => messageCreateHandler(message, client));
 client.on("interactionCreate", (interaction) =>
-  commandHandler(client, interaction)
+  interactionHandler(client, interaction)
 );
 client.on("error", console.error);
+client.on("guildMemberAdd", (member) => {
+  welcomeHandler(member);
+});
 
 // Database connection & Bot Login
 connect().then(() => {
   client.login(process.env.TOKEN);
 });
 
-sendDataToWebsite({ key: 'value' });
+sendDataToWebsite({ key: "value" });
 
 // Listen for termination signals
 process.on("SIGINT", function () {

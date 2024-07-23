@@ -11,6 +11,43 @@ dotenv.config();
 
 let openTickets = new Map();
 
+export default async function interactionHandler(client, interaction) {
+  if (interaction.isCommand()) {
+    const command = client.commands.get(interaction.commandName);
+    if (!command) return;
+
+    if (await hasPermission(interaction, command)) {
+      try {
+        await command.execute(interaction);
+      } catch (executionError) {
+        console.error(executionError);
+        if (!interaction.replied) {
+          try {
+            await interaction.reply({
+              content: "There was an error while executing this command!",
+              ephemeral: true,
+            });
+          } catch (replyError) {
+            console.error("Failed to send error message:", replyError);
+          }
+        }
+      }
+    }
+  } else if (interaction.isButton()) {
+    switch (interaction.customId) {
+      case "open_ticket":
+        await handleOpenTicket(interaction);
+        break;
+      case "claim_ticket":
+        await handleClaimTicket(interaction);
+        break;
+      case "close_ticket":
+        await handleCloseTicket(interaction, client);
+        break;
+    }
+  }
+}
+
 async function hasPermission(interaction, command) {
   let missingPermissions = [];
   let permissionMessage;
@@ -67,43 +104,6 @@ async function hasPermission(interaction, command) {
   }
 
   return true;
-}
-
-export default async function interactionHandler(client, interaction) {
-  if (interaction.isCommand()) {
-    const command = client.commands.get(interaction.commandName);
-    if (!command) return;
-
-    if (await hasPermission(interaction, command)) {
-      try {
-        await command.execute(interaction);
-      } catch (executionError) {
-        console.error(executionError);
-        if (!interaction.replied) {
-          try {
-            await interaction.reply({
-              content: "There was an error while executing this command!",
-              ephemeral: true,
-            });
-          } catch (replyError) {
-            console.error("Failed to send error message:", replyError);
-          }
-        }
-      }
-    }
-  } else if (interaction.isButton()) {
-    switch (interaction.customId) {
-      case "open_ticket":
-        await handleOpenTicket(interaction);
-        break;
-      case "claim_ticket":
-        await handleClaimTicket(interaction);
-        break;
-      case "close_ticket":
-        await handleCloseTicket(interaction, client);
-        break;
-    }
-  }
 }
 
 async function handleOpenTicket(interaction) {
@@ -215,7 +215,9 @@ async function handleClaimTicket(interaction) {
 
   await interaction.update({ components });
 
-  await interaction.message.edit({ content: `<@${member.id}> has claimed this ticket.` });
+  await interaction.message.edit({
+    content: `<@${member.id}> has claimed this ticket.`,
+  });
   await interaction.followUp({
     content: "You have claimed this ticket.",
     ephemeral: true,
